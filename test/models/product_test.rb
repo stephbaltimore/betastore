@@ -3,7 +3,9 @@ require 'test_helper'
 class ProductTest < ActiveSupport::TestCase
   test "create a product" do
     product = Product.new
-    refute product.save, product.errors.full_messages
+    product.name = "Shoes"
+    product.price = "3.00"
+    assert product.save, product.errors.full_messages
   end
 
   test "name is required" do
