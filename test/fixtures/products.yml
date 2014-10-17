@@ -4,6 +4,6 @@ hat:
   name: Hat
   price: 9.99
 
-hoodie:
-  name: Sweatshirts
-  price: 29.99
+jacket:
+  name: Jacket
+  price: 17.99
