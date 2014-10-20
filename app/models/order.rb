@@ -4,12 +4,12 @@ class Order < ActiveRecord::Base
   has_many :line_items
   has_many :products, :through => :line_items
 
-  def self.recent
-    where("placed_at > ?", 7.days.ago)
+def calculate_order_total_amount
+  self.total_amount = 0
+  for line_item in line_items
+    self.total_amount += line_item.total_amount
   end
-
-  def self.by(customer)
-    where(customer_id: customer.id)
-  end
+  save
+end
 
 end
