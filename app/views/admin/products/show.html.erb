@@ -1,0 +1,5 @@
+
+<%= image_tag @product.image_url, alt: @product.image_url %>
+<p>Name: <%= @product.name %></p>
+<br/>
+Price: <%= number_to_currency @product.price %>
