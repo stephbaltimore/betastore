@@ -1,5 +1,9 @@
 <h1>Products</h1>
 
+<% if flash[:notice].present? %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <table>
   <tr>
     <th>ID</th>
