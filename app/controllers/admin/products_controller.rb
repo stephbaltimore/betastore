@@ -20,6 +20,22 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
+  # def edit
+  #   @product = Product.find(params[:id])
+  # end
+  #
+  # def update
+  #   @product = Product.find(params[:id])
+  # end
+  #
+  # def destroy
+  #   @product = Product.find(params[:id])
+  # end
+  #
+  # def index
+  #
+  # end
+
   private
   def product_params
     params.require(:product).permit!
