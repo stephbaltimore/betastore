@@ -20,21 +20,25 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
-  # def edit
-  #   @product = Product.find(params[:id])
-  # end
-  #
-  # def update
-  #   @product = Product.find(params[:id])
-  # end
-  #
-  # def destroy
-  #   @product = Product.find(params[:id])
-  # end
-  #
-  # def index
-  #
-  # end
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    if @product.update_attributes(product_params)
+      redirect_to admin_products_path, notice: "Product #{@product.id} was updated"
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    Product.find(params[:id]).destroy
+    flash[:success] = "Product deleted"
+    redirect_to admin_products_path, notice: "Product #{@product.id} was deleted"
+  end
+
 
   private
   def product_params

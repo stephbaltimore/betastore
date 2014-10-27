@@ -1,4 +1,4 @@
-<h1>New Product</h1>
+<h1>Update Product</h1>
 <%= form_for [:admin, @product] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -6,7 +6,7 @@
   <%= f.text_field :price %>
   <%= f.label :image_url %>
   <%= f.url_field :image_url %>
-  <%= f.submit "Save Changes" %>
+  <%= f.submit %>
 <% end %>
 
 <% @product.errors.full_messages.each do |error| %>
@@ -14,3 +14,5 @@
   <%= error %>
 
 <% end %>
+
+<%= link_to "delete", product, method: :delete, data: { confirm: "You sure?" } %>
