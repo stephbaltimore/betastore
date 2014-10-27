@@ -14,7 +14,7 @@ class Admin::ProductsController < ApplicationController
   def create
   @product = Product.new(product_params)
     if @product.save
-      redirect_to admin_products_path, notice: "Product #{@product.id} was created"
+      redirect_to admin_products_path, notice: "Product #{@product.name} was created"
     else
       render 'new'
     end
@@ -27,16 +27,19 @@ class Admin::ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update_attributes(product_params)
-      redirect_to admin_products_path, notice: "Product #{@product.id} was updated"
+      redirect_to admin_products_path, notice: "Product #{@product.name} was updated"
     else
       render 'edit'
     end
   end
 
   def destroy
-    Product.find(params[:id]).destroy
-    flash[:success] = "Product deleted"
-    redirect_to admin_products_path, notice: "Product #{@product.id} was deleted"
+    @product = Product.find(params[:id])
+    if @product.destroy
+      redirect_to admin_products_path, notice: "Product #{@product.name} was deleted"
+    else
+      render 'deleted'
+    end
   end
 
 

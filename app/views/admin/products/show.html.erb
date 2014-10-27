@@ -3,3 +3,5 @@
 <p>Name: <%= @product.name %></p>
 <br/>
 Price: <%= number_to_currency @product.price %>
+
+<%= link_to "Edit", edit_admin_product_path(@product) %>
