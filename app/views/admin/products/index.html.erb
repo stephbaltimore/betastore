@@ -2,8 +2,10 @@
 <% if flash[:notice].present? %>
  <div class="notice"><%= flash[:notice] %></div>
 <% end %>
-<%= link_to "New Product", new_admin_product_path %>
-<table>
+
+<button type="button" class="btn btn-primary"><%= link_to "New Product", new_admin_product_path %></button>
+
+<table class="table">
  <tr>
    <th>ID</th>
    <th>Name</th>

@@ -1,11 +1,19 @@
 <h1>New Product</h1>
-<%= form_for [:admin, @product] do |f| %>
+
+<%= form_for [:admin, @product], {html: {role: 'form'}} do |f| %>
+
+<div class="form-group">
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+</div>
+<div class="form-group">
   <%= f.label :price %>
-  <%= f.text_field :price %>
+  <%= f.text_field :price, class: 'form-control' %>
+</div>
+<div class="form-group">
   <%= f.label :image_url %>
-  <%= f.url_field :image_url %>
+  <%= f.url_field :image_url, class: 'form-control' %>
+</div>
   <%= f.submit "Create Product" %>
 <% end %>
 
