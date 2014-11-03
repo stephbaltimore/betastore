@@ -2,23 +2,43 @@
 
 <%= form_for [:admin, @product], {html: {role: 'form'}} do |f| %>
 
-<div class="form-group">
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
-</div>
-<div class="form-group">
-  <%= f.label :price %>
-  <%= f.text_field :price, class: 'form-control' %>
-</div>
-<div class="form-group">
-  <%= f.label :image_url %>
-  <%= f.url_field :image_url, class: 'form-control' %>
-</div>
+<div class="form-horizontal">
+  <div class="form-group">
+    <%= f.label :name, class: 'col-sm-2 control-label' %>
+
+    <div class='col-sm-10'>
+    <%= f.text_field :name, class: 'form-control'%>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <%= f.label :price, class: 'col-sm-2 control-label' %>
+
+    <div class='col-sm-10'>
+      <%= f.text_field :price, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image_url, class: 'col-sm-2 control-label' %>
+
+    <div class='col-sm-10'>
+    <%= f.url_field :image_url, class: 'form-control' %>
+    </div>
+
+  </div>
+
   <%= f.submit "Create Product" %>
-<% end %>
 
+<% end %>
+</div>
+
+<div class="text-danger">
 <% @product.errors.full_messages.each do |error| %>
-
-  <%= error %>
+<ul>
+  <li><%= error %></li>
+</ul>
 
 <% end %>
+</div>
