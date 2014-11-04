@@ -1,9 +1,9 @@
 <h1>Products</h1>
 <% if flash[:notice].present? %>
- <div class="notice"><%= flash[:notice] %></div>
+ <div class="alert alert-success"><%= flash[:notice] %></div>
 <% end %>
 
-<button type="button" class="btn btn-success"><%= link_to "New Product", new_admin_product_path %></button>
+<%= link_to "New Product", new_admin_product_path, class: "btn btn-success" %>
 
 <table class="table">
  <tr>
