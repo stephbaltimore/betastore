@@ -1,4 +1,9 @@
 
+<ol class="breadcrumb">
+  <li><a href="/admin/products">Products</a></li>
+ <li class="active"> <%= @product.name  %> </li> 
+</ol>
+
 <%= image_tag @product.image_url, alt: @product.image_url %>
 <p>Name: <%= @product.name %></p>
 <br/>
