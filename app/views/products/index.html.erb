@@ -12,7 +12,7 @@
        <tr>
          <td><%= link_to product.name, admin_product_path(product) %></td>
          <td><%= number_to_currency product.price %></td>
-         <td><%= button_to "Add to Cart", product_path(product), :method => :get, class: "btn btn-success" %></td>
+         <td><%= button_to "Add to Cart", add_to_cart_product_path(product), :method => :post, class: "btn btn-success" %></td>
        </tr>
  <% end %>
 </table>

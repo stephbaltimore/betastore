@@ -22,4 +22,8 @@ class ProductsController < ApplicationController
       redirect_to products_path, notice: 'Oops that didnt work'
     end
   end
+
+  def show;
+  end
+
 end

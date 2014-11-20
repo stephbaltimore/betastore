@@ -1,0 +1,25 @@
+<table class="table">
+ <tr>
+   <th><h2>Name</h2></th>
+   <th><h2>Price</h2> </th>
+   <th></th>
+ </tr>
+ <% for cart_product in current_cart.cart_products %>
+   <tr>
+     <td><%= cart_product.product.name %></td>
+     <td><%= number_to_currency cart_product.product.price %></td>
+     <td><%= button_to "&ndash;".html_safe, cart_product_path(cart_product), method: :delete, data: {confirm: "Remove #{cart_product.product.name} from your cart?"} %></td>
+   </tr>
+ <% end %>
+</table>
+
+<tr>
+  <th><h2>Total</h2></th>
+  <th><h3><%= number_to_currency current_cart.subtotal %></h3></th>
+</tr>
+
+
+
+<p>
+<%= button_to "Checkout", "#", class: 'btn btn-success' %>
+</p>
