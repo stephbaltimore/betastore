@@ -1,7 +1,7 @@
+
 class LineItem < ActiveRecord::Base
   belongs_to :order
   belongs_to :product
-  belongs_to :cart
 
   after_save :calculate_order_total_amount
 
