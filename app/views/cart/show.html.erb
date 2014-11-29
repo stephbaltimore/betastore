@@ -1,16 +1,16 @@
 <table class="table">
- <tr>
-   <th><h2>Name</h2></th>
-   <th><h2>Price</h2> </th>
-   <th></th>
- </tr>
- <% for cart_product in current_cart.cart_products %>
-   <tr>
-     <td><%= cart_product.product.name %></td>
-     <td><%= number_to_currency cart_product.product.price %></td>
-     <td><%= button_to "&ndash;".html_safe, cart_product_path(cart_product), method: :delete, data: {confirm: "Remove #{cart_product.product.name} from your cart?"} %></td>
-   </tr>
- <% end %>
+  <tr>
+    <th><h2>Name</h2></th>
+    <th><h2>Price</h2> </th>
+    <th></th>
+  </tr>
+  <% for cart_product in current_cart.cart_products %>
+  <tr>
+    <td><%= cart_product.product.name %></td>
+    <td><%= number_to_currency cart_product.product.price %></td>
+    <td><%= button_to "&ndash;".html_safe, cart_product_path(cart_product), method: :delete, data: {confirm: "Remove #{cart_product.product.name} from your cart?"} %></td>
+  </tr>
+  <% end %>
 </table>
 
 <tr>
@@ -21,7 +21,5 @@
 
 
 <p>
-<%= , new_order_path, method: :get, class: 'btn btn-success' %>
-<%= button_to 'Empty cart', cart, method: :delete,
-    data: { confirm: 'Are you sure?' } %>
+  <%= button_to "Checkout", "#", class: 'btn btn-success' %>
 </p>
