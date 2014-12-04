@@ -7,7 +7,6 @@ class CreateOrders < ActiveRecord::Migration
       t.timestamps
     end
     add_index :orders, :cart_id, :unique => true
-
     end
   end
 end
