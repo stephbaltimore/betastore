@@ -11,6 +11,9 @@ Betastore::Application.routes.draw do
     end
   end
 
+  resources :orders do
+  end
+
   resources :cart do
   end
 

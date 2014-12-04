@@ -1,0 +1,13 @@
+<h1>Order #<%= @order.id %> was created</h1>
+
+<h4>Thank you for shopping at Betastore.</h4>
+
+<table>
+  <% @order.line_items.each do |line_item| %>
+  <tr>
+    <td><%= line_item.name %></td>
+    <td><%= line_item.quantity %></td>
+    <td><%= line_item.price %></td>
+  </tr>
+  <% end %>
+</table>

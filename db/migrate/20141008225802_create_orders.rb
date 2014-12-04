@@ -1,11 +1,13 @@
 class CreateOrders < ActiveRecord::Migration
   def change
     create_table :orders do |t|
-      t.belongs_to :customer, index: true
-      t.datetime :placed_at
-      t.decimal :total_amount
+      t.string :email
+      t.references :cart
 
       t.timestamps
+    end
+    add_index :orders, :cart_id, :unique => true
+
     end
   end
 end

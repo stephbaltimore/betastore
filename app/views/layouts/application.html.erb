@@ -19,15 +19,15 @@
       </button>
       <a class="navbar-brand" href="#"><img height="30px" src="http://betamore.com/wp-content/uploads/2013/04/logo.png"></a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/products">Product List</a></li>
-        <li class="active"><a href="/admin/products">Admin</a></li>
-        <li class="badge"> <a href="<%= cart_path %>">
-            <span class="badge badge-success">
+        <li><a href="/products">Product List</a></li>
+        <li><a href="/admin/products">Admin Login</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li> <a href="<%= cart_path %>">
               Cart:
+              <span class="badge badge-success">
               <% if current_cart %>
                 <%= current_cart.item_count %>
               <% else %>
