@@ -13,3 +13,18 @@
  *= require bootstrap
  *= require_self
  */
+
+.beta-dark-background {
+  background-color: #464c52;
+  padding: 50px 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beta-light {
+  color: #FFFFFF;
+}
+
+.col-centered {
+  margin: 0 auto;
+}

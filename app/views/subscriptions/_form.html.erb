@@ -1,14 +1,17 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-9">
-      <h1>Betastore</h1>
-      Our store is launching soon!
+    <div class="col-md-12">
+      <img src="http://www.mava.org/Portals/0/Betamore_logo-full.jpg" class="img-responsive">
+      <p class="col-centered">Our store is launching soon! Check back in 2015 for our product line.</b>
     </div>
-
-    <div class="col-md-3">
+  <div class="row">
+    <div class="col-md-12 beta-dark-background col-centered">
             <%= form_for(@subscription) do |f| %>
               <div class="field">
-                <%= f.label :email, "Find out when we go live:" %>
+                <div class="beta-light">
+                <%= f.label :email, "<h1>Find out when we go live:</h1>".html_safe %>
+                </div>
+                <br />
                 <%= f.text_field :email %>
                 <%= f.submit "Sign Up" %>
               </div>
