@@ -9,8 +9,8 @@ class AddOrdersAndLineItems < ActiveRecord::Migration
 
     change_table :line_items do |t|
       t.string     :name
-
     end
 
+    
   end
 end
