@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/stripe/stripe-ruby
+  revision: 9c7ebd21c97358d1329abdbd91628dbf970d314f
+  specs:
+    stripe (1.16.0)
+      json (~> 1.8.1)
+      mime-types (>= 1.25, < 3.0)
+      rest-client (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -86,6 +95,7 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.2)
     multi_json (1.10.1)
+    netrc (0.9.0)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     pg (0.17.1)
@@ -127,6 +137,9 @@ GEM
     redis (3.1.0)
     redis-namespace (1.5.1)
       redis (~> 3.0, >= 3.0.4)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     ruby2ruby (2.1.3)
       ruby_parser (~> 3.1)
       sexp_processor (~> 4.0)
@@ -199,4 +212,5 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   sidekiq
   spring
+  stripe!
   uglifier (>= 1.3.0)

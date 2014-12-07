@@ -16,6 +16,7 @@ gem 'spring',        group: :development
 gem 'uglifier', '>= 1.3.0'
 gem 'brakeman', require: false
 gem 'sidekiq'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

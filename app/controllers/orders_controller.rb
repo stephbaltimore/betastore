@@ -6,6 +6,16 @@ class OrdersController < ApplicationController
 
   def create
     order = Order.create!(order_params)
+
+    begin
+      charge = Stripe::Charge.create(
+      :amount => (current_cart.total * 100).round, # amount in cents, again
+      :currency => "usd",
+      :card => params[:stripeToken],
+      :description => order.email
+      )
+    end
+
     current_cart.cart_products.each do |cart_product|
       line_item = order.line_items.build(
       product_id:  cart_product.product_id,
