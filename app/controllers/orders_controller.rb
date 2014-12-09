@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
 
     begin
       charge = Stripe::Charge.create(
-      :amount => (current_cart.total * 100).round, # amount in cents, again
+      :amount => (current_cart.subtotal * 100).round, # amount in cents, again
       :currency => "usd",
       :card => params[:stripeToken],
       :description => order.email
