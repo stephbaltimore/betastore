@@ -15,7 +15,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'uglifier', '>= 1.3.0'
 gem 'brakeman', require: false
-# gem 'sidekiq'
+gem 'sidekiq'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Use ActiveModel has_secure_password
