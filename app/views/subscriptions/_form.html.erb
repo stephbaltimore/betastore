@@ -1,11 +1,10 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-sm-6">
       <img src="http://www.mava.org/Portals/0/Betamore_logo-full.jpg" class="img-responsive">
       <p class="col-centered">Our store is launching soon! Check back in 2015 for our product line.</b>
     </div>
-  <div class="row">
-    <div class="col-md-12 beta-dark-background col-centered">
+    <div class="col-sm-6 beta-dark-background col-centered">
             <%= form_for(@subscription) do |f| %>
               <div class="field">
                 <div class="beta-light">
@@ -17,11 +16,12 @@
               </div>
             <% end %>
 
+            <div class="beta-light">
             <% if flash.present? %>
               <% flash.each do |k,v| %>
                 <div class="<%= k %>"><%= v %></div>
               <% end %>
             <% end %>
+          </div>
     </div>
-  </div>
 </div>
