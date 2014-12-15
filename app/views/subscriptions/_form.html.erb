@@ -1,27 +1,34 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-6">
-      <img src="http://www.mava.org/Portals/0/Betamore_logo-full.jpg" class="img-responsive">
-      <p class="col-centered">Our store is launching soon! Check back in 2015 for our product line.</b>
-    </div>
-    <div class="col-sm-6 beta-dark-background col-centered">
-            <%= form_for(@subscription) do |f| %>
-              <div class="field">
-                <div class="beta-light">
-                <%= f.label :email, "<h1>Find out when we go live:</h1>".html_safe %>
-                </div>
-                <br />
-                <%= f.text_field :email %>
-                <%= f.submit "Sign Up" %>
-              </div>
-            <% end %>
+    <div class="col-sm-12 jumbotron">
+      <img src="http://www.stephbaltimore.com/wp-content/uploads/2014/12/Betastore.png" width="75%" class="img-responsive betalogo">
+      <p class="col-centered text-center">Our store is launching soon! Check back in 2015 for our product line.</b>
 
+
+        <div class= "beta-dark-background col-centered">
+
+          <%= form_for(@subscription) do |f| %>
+          <div class="field form-horizontal">
+            <div class="form-group">
             <div class="beta-light">
+              <%= f.label :email, "<p>Find out when we go live:</p>".html_safe, class: 'control-label' %>
+            </div>
+            <%= f.text_field :email, class: 'form-control' %>
+            <br />
+            <%= f.submit "Sign Up", class: 'btn btn-default' %>
+          <% end %>
+        </div>
+      </div>
+
+          <div class="beta-light">
             <% if flash.present? %>
-              <% flash.each do |k,v| %>
-                <div class="<%= k %>"><%= v %></div>
-              <% end %>
+            <% flash.each do |k,v| %>
+            <div class="<%= k %>"><%= v %></div>
+            <% end %>
             <% end %>
           </div>
+        </div>
+
+
     </div>
 </div>
